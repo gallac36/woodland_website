@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<style>
+
+
+</style>
+{% load staticfiles %}
+
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <h4 class="card-title">Delivering a community-based renewable energy heating solution</h4>
+
+            <p class="card-text">Donegal Woodland Owners Society Limited has been established to maximise the value of this resource for        woodland owners by creating added value through sustainable local employment.</p>
+            <p class="card-text">At present, annually, over 200,000 tons (over 90%) of timber leaves Donegal unprocessed with little or no added value, as it leaves the forest gate and County Donegal in raw saw log form. Today, with the increasing volumes of timber now coming onto the market from the newly established forests in the private sector, Donegal Woodland Owners Society Limited (DWOSL) is determined to build up new and existing forestry enterprises and a forestry culture within Donegal.</p>
+            <p class="card-text text-muted h6">Delivering a community-based renewable energy heating solution </p>
+            <p class="card-text">Most beneficially, our program and goals will:</p>
+            <p class="card-text"><ul type="disc">
+                <li>Reduce CO2 emissions</li>
+                <li>Utilise local resources</li>
+                <li>Increase local employment</li>
+                <li>Contribute to long-term local economic growth</li>
+            </ul>
+            </p>
+        </div>
+    </div>
+
+{%endblock%}
+
+{% block sidebar %}
+
+<div class="card  my-4">
+        <h5 class="card-header">Latest News </h5>
+    <div class="card-body">
+        <p class="card-text"> {{ newsest_news.title }} </p>
+        <p class="card-text">{{newsest_news.content|truncatechars_html:100|safe }}</p>
+
+
+        <a href="{% url 'news' %}" class="btn">Read More &rarr;</a>
+    </div>
+</div>
+    <div class="card  my-4">
+            <h5 class="card-header">Latest Event </h5>
+        <div class="card-body">
+            <p class="card-text"> {{ first_event.title }} </p>
+            <p class="card-text"> {{ first_event.content|truncatechars_html:100|safe }} </p>
+
+            <a href="{% url 'events' %}" class="btn">Read More &rarr;</a>
+        </div>
+    </div>
+
+{%endblock%}

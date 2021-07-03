@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <h2 class="card-title">FIREWOOD</h2>
+            <p class="card-text text-muted h6">FIRE IERIER EIR EIR IERIER EIR IER </p>
+            <p class="card-text">even more WAFFEL waffel waffel waffel waffel WAFFEL waffel WAFFEL</p>
+        </div>
+    </div>
+
+{%endblock%}
+{% block sidebar %}
+
+<div class="card  my-4">
+        <h5 class="card-header">Latest News </h5>
+    <div class="card-body">
+        <p class="card-text"> {{ newsest_news.title }} </p>
+        <p class="card-text">{{newsest_news.content|truncatechars_html:100|safe }}</p>
+
+
+        <a href="{% url 'news' %}" class="btn">Read More &rarr;</a>
+    </div>
+</div>
+    <div class="card  my-4">
+            <h5 class="card-header">Latest Event </h5>
+        <div class="card-body">
+            <p class="card-text"> {{ first_event.title }} </p>
+            <p class="card-text"> {{ first_event.content|truncatechars_html:100|safe }} </p>
+
+            <a href="{% url 'events' %}" class="btn">Read More &rarr;</a>
+        </div>
+    </div>
+
+{%endblock%}

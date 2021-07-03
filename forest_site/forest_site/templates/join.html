@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+{% load staticfiles %}
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <h3 class="card-title">Membership</h3>
+            <p class="card-text text-muted h6">Joining our Co-operative Society </p>
+            <p class="card-text">DWOSL can assist growers with timber marketing, to maximise the saleability of your timber. As well as insurance, fire breaks, felling licences and management plans, etc, DWOSL membership also brings the following benefits:
+            <ul type="disk">
+                <li> Accessing update information on developments in the forestry sector </li>
+                <li> Keeping you informed of issues affecting growers in Donegal</li>
+                <li> Developing markets for produce from your woodlands</li>
+                <li> Marketing your timber</li>
+            </ul>
+            <p class="card-text"> To be eligible for membership applicants must own woodland located in Co. Donegal. Each member owns one share in the Society, irrespective of the size of their woodland. The share has a value of €5. The Society has been financed to date by membership fees, charges for goods and services provided and a start up grant from the Forest Service of the Department of Agriculture, Fisheries and Food. The voluntary commitment of the members has resulted in huge cost savings to the group.</p>
+
+            <p class="card-text"> Contact us to apply for membership or download the <a  href="{% static "dwoslapplicationpack.pdf" %}"> DWOSL Membership Application Pack,</a></p>
+
+        </div>
+
+    </div>
+
+{%endblock%}
+
+{% block sidebar %}
+
+<div class="card  my-4">
+        <h5 class="card-header">Latest News </h5>
+    <div class="card-body">
+        <p class="card-text"> {{ newsest_news.title }} </p>
+        <p class="card-text">{{newsest_news.content|truncatechars_html:100|safe }}</p>
+
+
+        <a href="{% url 'news' %}" class="btn">Read More &rarr;</a>
+    </div>
+</div>
+    <div class="card  my-4">
+            <h5 class="card-header">Latest Event </h5>
+        <div class="card-body">
+            <p class="card-text"> {{ first_event.title }} </p>
+            <p class="card-text"> {{ first_event.content|truncatechars_html:100|safe }} </p>
+
+            <a href="{% url 'events' %}" class="btn">Read More &rarr;</a>
+        </div>
+    </div>
+
+{%endblock%}

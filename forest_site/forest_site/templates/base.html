@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+    <head>
+        <title>Donegal Woodland Owners Society Ltd.</title>
+        <link href="{% static 'main2.css' %}" rel="stylesheet" type="text/css">
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <meta name="google" content="notranslate" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="	sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+        <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+        <!-- Add icon library -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+    	<header>
+    			<div class="header">
+    		</div>
+    	</header>
+    	<div class="content">
+        <!--	<div class="jumbotron" >
+        		<h1><b>Donegal Woodland Owners Society Ltd</b> </h1>
+        	</div> -->
+
+	      	<div class="container">
+	      		<div class="row">
+	      			<div class ="nav_row">
+	      			<!-- <div class="col-sm">
+	      				<div class="container">
+	      				<img src="{% static 'dwoslogo.jpg' %}" alt="DWOSL Logo" width="260" height="135">
+	      				</div>
+	      			</div>
+
+	      			<div class="col-sm">
+	      				<div class="container" style="background: blue;"> -->
+	      					<!--<h3>nav goes here ya cunt</h3>
+	      				 Navigation -->
+
+					<nav class="navbar navbar-expand-lg navbar-light" >
+					  <a class="navbar-brand" href="#">
+   						 <img src="{% static 'dwoslogo.jpg' %}" width="300" height="150" alt="DWOSL Logo">
+ 						</a>
+					  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+					    <span class="navbar-toggler-icon "></span>
+					  </button>
+					  <div class="collapse navbar-collapse float-right" id="navbarNavDropdown">
+
+					    <ul class="navbar-nav font-weight-bold">
+					      <li class="nav-item active">
+					        <a class="nav-link" href="/index/">Home <span class="sr-only">(current)</span></a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="/about/">About Us</a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="/news/">News</a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="/firewood/">Firewood</a>
+					        </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="/events/">Events</a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="/join/">Join</a>
+					      </li>
+
+					      <li class="nav-item dropdown">
+						      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Useful Info</a>
+					        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					          <a class="dropdown-item" href="#">Grants</a>
+					          <a class="dropdown-item" href="#">How to do Thining</a>
+					          <a class="dropdown-item" href="#">How to do Planting</a>
+					        </div>
+					      </li>
+					    </ul>
+					  </div>
+					</nav>
+
+	      				<!--</div>
+	      			</div>-->
+	      		</div>
+	      		</div>
+				<div class="row">
+					<div class="col-md-8 mt-3 left">
+			        {% block content %}
+
+			        <!-- Content Goes here -->
+
+			        {% endblock content %}
+			        </div>
+			        <div class="col-md-4 float-right ">
+                {% block sidebar %}
+                 <!-- Content Goes here -->
+                {% endblock sidebar %}
+
+		        	</div>
+		        </div>
+
+
+		        <div class="row">
+
+
+		    </div>
+
+
+
+
+		    	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+			</div>
+		</div>
+	<!-- Footer -->
+	    <footer>
+	      <div class="row">
+	      	<!-- Add icon library -->
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	            <div class="col-md-7 mt-3 left">
+	              <div class="contact">
+	              	<!-- Add font awesome icons -->
+					<a href="#" class="fa fa-facebook"></a>
+					<a href="#" class="fa fa-twitter"></a>
+					<a href="#" class="fa fa-google"></a>
+	                <p><b> Address:</b> P.O. Box 10, Donegal Town, Co. Donegal, Ireland.</p>
+	                <p><b> Email:</b> admin.dwogsl@gmail.com</p>
+	                <p><b>Phone: </b> 086 041 0809</p>
+	              </div>
+	      		</div>
+
+	            <div class="col-md-5 bottom-text ">
+	            	<p >Copyright &copy; {{ current_year }} Donegal Woodland Owners Society Ltd.</p>
+	        		<p >Web Design by Conor Gallagher</p>
+	            </div>
+	      </div>
+
+
+	    </footer>
+    </body>
+</html>

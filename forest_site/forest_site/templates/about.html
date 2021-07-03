@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<style>
+
+
+</style>
+{% load staticfiles %}
+
+
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <h4 class="card-title">About Us</h4>
+
+            <p class="card-text">Donegal Woodland Owners Society Limited was registered as a cooperative Society on 27th March 2008. The main objective of the Society is to maximise returns to forest owners through good forest management.</p>
+            <p class="card-text">To date the Society has over 150 members who between them own approximately 15,000 acres of woodland located in Co. Donegal.</p>
+
+            <p class="card-text"> The DWOSL is assissting its Members in growing their woodland to its full potential by providing a range of Services, hosting field days and seminars throughout the year.</p>
+            <p class="card-text"> By organising into a group woodland owners in Donegal can increase the saleability of their produce and bring their plantations into active management increasing the quality of their produce and thus the returns.
+
+            <p class="card-text text-muted h5">   Committee Membership</p>
+            <p class="card-text">A Committee of up to 13 members is elected every year. Measures are put in place to ensure the Committee has representatives from throughout the County.</p>
+            <p class="card-text">The 2013 Committee officers and members are:</p>
+
+
+            <p class="card-text text-muted h5"> Committee Membership</p>
+            <p class="card-text">A bottom up, hands on approach has been adopted by the Society members with the added commitment of voluntary time and labour. Reward for this commitment will be in the skills acquired and employed in the best management of their forests and from the local processing and value added of their timber and the non timber forest goods and services (e.g. recreation, tourism, etc).</p>
+            <p class="card-text text-muted h5"> Future Developments</p>
+            <p class="card-text">An inventory of members' timber which is approaching thinning or harvesting stage is ongoing. Membership of DWOSL can be enlarged, the machinery pool further increased and goods and services expanded to meet the increasing needs of our members and our local communities.</p>
+            <p class="card-text">With ever increasing volumes of timber coming onto the market from privately owned forests it is now time for Donegal to harness this indigenous growth area. If the venture is successful Donegal could be importing raw saw log instead of exporting it.</p>
+
+
+        </div>
+    </div>
+
+{%endblock%}
+{% block sidebar %}
+
+<div class="card  my-4">
+        <h5 class="card-header">Latest News </h5>
+    <div class="card-body">
+        <p class="card-text"> {{ newsest_news.title }} </p>
+        <p class="card-text">{{newsest_news.content|truncatechars_html:100|safe }}</p>
+
+
+        <a href="{% url 'news' %}" class="btn">Read More &rarr;</a>
+    </div>
+</div>
+    <div class="card  my-4">
+            <h5 class="card-header">Latest Event </h5>
+        <div class="card-body">
+            <p class="card-text"> {{ first_event.title }} </p>
+            <p class="card-text"> {{ first_event.content|truncatechars_html:100|safe }} </p>
+
+            <a href="{% url 'events' %}" class="btn">Read More &rarr;</a>
+        </div>
+    </div>
+
+{%endblock%}

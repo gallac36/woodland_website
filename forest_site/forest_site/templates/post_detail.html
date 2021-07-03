@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+ {% block content %}
+
+<div class="container">
+
+  <div class="row">
+    <div class=" card mb-4  mt-3 left  top">
+      <div class="card-body">
+        <h2 class="card-title">{% block title %} {{ object.title }} {% endblock title %}</h2>
+        <p class=" text-muted"> {{ post.created_on }}</p>
+
+        <p class="card-text ">{{ object.content | safe }}</p>
+        <img src=" {% static post.image.url|default_if_none:'uploaded_images/bear_ship.png' %}"  alt="{{ post.title }}" style="width: 100%; height: auto;" " >
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock content %}
+<!--  <img src=" {{ blog_post.image.url }}"  alt="{{ post.title }} " >*/ -->
