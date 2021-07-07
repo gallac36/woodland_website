@@ -4,33 +4,54 @@
 
     <div class="card mb-4">
         <div class="card-body">
-            <h2 class="card-title">FIREWOOD</h2>
-            <p class="card-text text-muted h6">FIRE IERIER EIR EIR IERIER EIR IER </p>
-            <p class="card-text">even more WAFFEL waffel waffel waffel waffel WAFFEL waffel WAFFEL</p>
+            <h2 class="card-title">Firewood</h2>
+            <p class="card-text text-muted h6"><strong> Contact us to order firewood from one of our members, details at bottom of page.</strong> </p>
+
+            <p class="card-text h5">Sustainable energy - carbon neutral</p>
+
+            <p class="card-text text-muted"> Firewood is a renewable resource. The good forestry practices and efficiencies
+              promoted by the Donegal Woodland Owners Society help to increase the supply of this renewable energy resource
+              and improve the local supply of wood fuel. Wood is a biofuel and is therefore a carbon neutral form of energy.
+              Obtaining it from a local supplier helps to reduce your carbon footprint and supports local businesses. </p>
+
+            <p class="card-text h5">Wood Fuel & Burning Wood</p>
+
+            <p class="card-text">Wood is a versatile fuel that can be burned in many ways and in different appliances.
+              It can be burned to produce hot water, to cook, to heat one or more rooms or the whole house, or a
+              combination of all or some of these. To produce heat for one or more rooms logs can be burned in an open
+              fire or a wood burning stove. </p>
+
+            <p class="card-text h5">Wood Burning Stoves & Ranges</p>
+
+            <p class="card-text">A wood burning stove is a more efficient alternative to an open fire and can have an efficiency of over 70%.
+            Certain wood burning stoves can be burned in smokeless zones and also be fitted with back boilers to heat one
+            or more radiators or domestic hot water.</p>
+
+            <p class="card-text">Burning Wood as Fuel</p>
+
+            <p class="card-text">Wood needs plenty of air to burn well. Allow logs to burn freely until they almost turn to charcoal.
+              Then reduce the air supply to dampen down the fire. This stops any build up of smoke and tar.</p>
+              <p class="card-text  h6"><strong> Read more about the different uses of Firewood in the
+                <a  href="{% static "firewoodleaflet.pdf" %}"> DWOSL Information Leaflet on Firewood </a></strong> </p>
         </div>
     </div>
 
 {%endblock%}
 {% block sidebar %}
+  <!-- <p><b> Buy by the bag:</b></p>
+  <img src="{% static "bags2.jpg" %}" class="img-fluid rounded mx-auto d-bloc" alt="bag of firewood">
+  <p><b>Or by the trailer load: </p>
+  <img src="{% static "trailer.jpg" %}" class="img-fluid rounded mx-auto d-bloc" alt=" twin axel trailer filled with firewood">
+  <img src="{% static "woodpile003.jpg" %}" class="img-fluid float-bottom" alt="covered stack of firewood">
+  -->
 
-<div class="card  my-4">
-        <h5 class="card-header">Latest News </h5>
-    <div class="card-body">
-        <p class="card-text"> {{ newsest_news.title }} </p>
-        <p class="card-text">{{newsest_news.content|truncatechars_html:100|safe }}</p>
+
+    <div ><b> Buy by the bag:</b></div>
+    <div class="p-2"><img src="{% static "bags2.jpg" %}" class="rounded mx-auto d-block" alt="bag of firewood"></div>
+    <div class="p-2"><b>Or by the trailer load:</b> </div>
+    <div class="p-2"><img src="{% static "trailer.jpg" %}" class="rounded mx-auto d-block" alt=" twin axel trailer filled with firewood"></div>
+    <div ><img src="{% static "woodpile003.jpg" %}" class="rounded mx-auto d-block wood_sidebar" alt="covered stack of firewood"></div>
 
 
-        <a href="{% url 'news' %}" class="btn">Read More &rarr;</a>
-    </div>
-</div>
-    <div class="card  my-4">
-            <h5 class="card-header">Latest Event </h5>
-        <div class="card-body">
-            <p class="card-text"> {{ first_event.title }} </p>
-            <p class="card-text"> {{ first_event.content|truncatechars_html:100|safe }} </p>
-
-            <a href="{% url 'events' %}" class="btn">Read More &rarr;</a>
-        </div>
-    </div>
 
 {%endblock%}

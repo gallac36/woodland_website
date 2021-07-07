@@ -125,7 +125,7 @@ footer{
 .fa-twitter {
     background: #55ACEE;
     color: white;
-} 
+}
 /* Gmail */
 .fa-google {
     background: #dd4b39;
@@ -133,4 +133,9 @@ footer{
 }
 .bottom-text{
   margin-top: 80px;
+}
+.wood_sidebar{
+  position: absolute;
+  bottom: 5em;
+
 }
