@@ -135,7 +135,9 @@ footer{
   margin-top: 80px;
 }
 .wood_sidebar{
-  position: absolute;
-  bottom: 5em;
+  /*position: absolute;*/
+  padding-bottom: 5em;
+  padding-top: 5em;
+
 
 }
