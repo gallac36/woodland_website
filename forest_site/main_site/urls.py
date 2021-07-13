@@ -10,5 +10,6 @@ urlpatterns = [
 	url(r'^about/', views.about, name='about'),
 	url(r'^join/', views.join, name='join'),
 	url(r'^firewood/', views.firewood, name='firewood'),
+	url(r'^archive/', views.archive, name='archive'),
 
 ]
