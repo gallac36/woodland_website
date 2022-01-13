@@ -22,6 +22,6 @@ def firewood (request):
 def join (request):
 #    return HttpResponse ('join')
     return render(request, 'join.html')
-    
+
 def archive (request):
     return render(request, 'archive.html')

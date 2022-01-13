@@ -19,7 +19,7 @@ body {
 }*/
 .content {
     background-color: white;
-	  max-width: 960px;
+	  max-width: 1200px;
  	  margin: auto;
 
 
@@ -27,7 +27,7 @@ body {
 
 
 .header {
-    max-width: 960px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     border-top-left-radius: 5px;
@@ -62,7 +62,7 @@ body {
 }
 footer{
 
-    max-width: 960px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
@@ -138,6 +138,8 @@ footer{
   /*position: absolute;*/
   padding-bottom: 5em;
   padding-top: 5em;
-
-
+}
+.archive_img{
+  width: 100%;
+  padding: 1em;
 }
