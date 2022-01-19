@@ -12,21 +12,36 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 
+import dotenv
+
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# Initiate related env class
+#env = dotenv.Env()
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
+# Take environment variables from .env.dev file
+#env.Env.read_env(os.path.join(BASE_DIR, '.env')
+
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'r236=e_a(%kv3@_+39cl#dws^@fd+iq@k%ls7=ct+58m)sszr='
+#SECRET_KEY = 'r236=e_a(%kv3@_+39cl#dws^@fd+iq@k%ls7=ct+58m)sszr='
+        #'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag'
+
+
+SECRET_KEY = [os.environ.get('SECRET_KEY')]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = True
+DEBUG = os.getenv('DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = []
 
+
+#ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS')
+# str(os.getenv('ALLOWED_HOSTS'))
+ALLOWED_HOSTS = [str(os.getenv('ALLOWED_HOSTS'))]
+#print("hosts here "+hosts)
 
 # Application definition
 
@@ -138,3 +153,8 @@ STATICFILES_DIRS = (
 
 # Path where media is stored
 MEDIA_ROOT = os.path.join(BASE_DIR, 'forest_site/static')
+
+#True to avoid transmitting the CSRF cookie over HTTP accidentally
+CSRF_COOKIE_SECURE = True
+#True to avoid transmitting the session cookie over HTTP accidentally
+SESSION_COOKIE_SECURE = True
