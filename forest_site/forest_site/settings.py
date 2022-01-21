@@ -33,8 +33,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = [os.environ.get('SECRET_KEY')]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
-DEBUG = os.getenv('DEBUG', '') != 'False'
+DEBUG = True
+#DEBUG = os.getenv('DEBUG', '') != 'False'
 
 
 
@@ -154,7 +154,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #MEDIA_URL = '/static/'
 
 # Path where media is stored
-MEDIA_ROOT = os.path.join(BASE_DIR, 'forest_site/static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'forest_site/media')
 
 #True to avoid transmitting the CSRF cookie over HTTP accidentally
 CSRF_COOKIE_SECURE = True
