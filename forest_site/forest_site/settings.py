@@ -26,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 'r236=e_a(%kv3@_+39cl#dws^@fd+iq@k%ls7=ct+58m)sszr='
+SECRET_KEY = 'r236=e_a(uuu3@_+39cl#dws^@fd+iq@k%ls7=ct+58m)sszr='
         #'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag'
 
 
@@ -40,7 +40,8 @@ DEBUG = os.getenv('DEBUG', '') != 'False'
 
 #ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS')
 # str(os.getenv('ALLOWED_HOSTS'))
-ALLOWED_HOSTS = [str(os.getenv('ALLOWED_HOSTS'))]
+#ALLOWED_HOSTS = [str(os.getenv('ALLOWED_HOSTS'))]
+ALLOWED_HOSTS = ['52.18.34.67']
 #print("hosts here "+hosts)
 
 # Application definition
