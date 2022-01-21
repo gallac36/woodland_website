@@ -149,6 +149,8 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "forest_site/static"),
 )
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 # Base url to serve media files
 #MEDIA_URL = '/static/'
 
