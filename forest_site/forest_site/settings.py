@@ -35,7 +35,7 @@ SECRET_KEY = [os.environ.get('SECRET_KEY')]
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
 DEBUG = os.getenv('DEBUG', '') != 'False'
-
+#
 
 
 #ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS')
@@ -149,7 +149,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "forest_site/static"),
 )
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'forest_site/static')
 
 # Base url to serve media files
 #MEDIA_URL = '/static/'
