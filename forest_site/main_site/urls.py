@@ -11,4 +11,5 @@ urlpatterns = [
 	url(r'^join/', views.join, name='join'),
 	url(r'^firewood/', views.firewood, name='firewood'),
 	url(r'^archive/', views.archive, name='archive'),
+	url(r'^archivefiles/', views.archive, name='archivefiles'),
 ]

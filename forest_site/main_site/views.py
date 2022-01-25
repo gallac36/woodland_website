@@ -25,3 +25,6 @@ def join (request):
 
 def archive (request):
     return render(request, 'archive.html')
+
+def archivefiles (request):
+    return render(request, 'archivefiles.html')
