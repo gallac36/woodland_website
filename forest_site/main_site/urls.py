@@ -10,6 +10,6 @@ urlpatterns = [
 	url(r'^about/', views.about, name='about'),
 	url(r'^join/', views.join, name='join'),
 	url(r'^firewood/', views.firewood, name='firewood'),
-	url(r'^archive/', views.archive, name='archive'),
-	url(r'^archivefiles/', views.archivefiles, name='archivefiles'),
+	url(r'^archive/', views.archivefiles, name='archive'),
+	url(r'^archivefiles/', views.archive, name='archivefiles'),
 ]
