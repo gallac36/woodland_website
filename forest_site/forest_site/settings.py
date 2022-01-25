@@ -45,7 +45,7 @@ DEBUG = True
 
 #ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS')
 # str(os.getenv('ALLOWED_HOSTS'))
-ALLOWED_HOSTS = [str(os.getenv('ALLOWED_HOSTS'))]
+ALLOWED_HOSTS = ['52.18.34.67', str(os.getenv('ALLOWED_HOSTS'))]
 #print("hosts here "+hosts)
 #
 # Application definition
