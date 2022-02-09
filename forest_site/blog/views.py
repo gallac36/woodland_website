@@ -10,6 +10,7 @@ class PostList(generic.ListView):
     template_name = 'news.html'
     #Listview adds (__list) to the context object, it can be overridden as well using context_object_name
     context_object_name = 'blog_posts'
+    paginate_by = 4
 
 class PostDetail(generic.DetailView):
    model = Post
