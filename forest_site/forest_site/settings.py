@@ -45,7 +45,7 @@ DEBUG = True
 
 #ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS')
 # str(os.getenv('ALLOWED_HOSTS'))
-ALLOWED_HOSTS = ['52.18.34.67', str(os.getenv('ALLOWED_HOSTS'))]
+ALLOWED_HOSTS = ['52.50.106.122', str(os.getenv('ALLOWED_HOSTS'))]
 #print("hosts here "+hosts)
 #
 # Application definition
@@ -171,8 +171,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 SESSION_COOKIE_SECURE = True
 
-#SESSION_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = False
 #CSRF_COOKIE_DOMAIN = '52.28.34.67'
-#CSRF_TRUSTED_ORIGINS = '52.28.34.67'
+CSRF_TRUSTED_ORIGINS = '52.50.106.122'
 #SECURE_PROXY_HANDLER = ('HTTP_X_FORWARDED_PROTO'. 'http')
 
