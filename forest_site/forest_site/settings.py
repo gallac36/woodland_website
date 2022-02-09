@@ -160,9 +160,9 @@ MEDIA_URL = '/media/'
 
 # Path where media is stored
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'forest_site/media')
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'forest_site/media')
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
 
 
 #True to avoid transmitting the CSRF cookie over HTTP accidentally
@@ -171,8 +171,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 SESSION_COOKIE_SECURE = True
 
-#SESSION_COOKIE_SECURE = False
-#CSRF_COOKIE_DOMAIN = '52.28.34.67'
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_DOMAIN = '52.28.34.67'
 #CSRF_TRUSTED_ORIGINS = '52.28.34.67'
 #SECURE_PROXY_HANDLER = ('HTTP_X_FORWARDED_PROTO'. 'http')
 
