@@ -13,6 +13,7 @@ class EventList(generic.ListView):
     template_name = 'events.html'
     #Listview adds (__list) to the context object, it can be overridden as well using context_object_name
     context_object_name = 'event_posts'
+    paginate_by = 4
 
 class EventDetail(generic.DetailView):
    model = Event
