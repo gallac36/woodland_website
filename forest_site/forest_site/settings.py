@@ -45,7 +45,7 @@ DEBUG = True
 
 #ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS')
 # str(os.getenv('ALLOWED_HOSTS'))
-ALLOWED_HOSTS = ['52.18.34.67', str(os.getenv('ALLOWED_HOSTS'))]
+ALLOWED_HOSTS = ['52.50.106.122', str(os.getenv('ALLOWED_HOSTS'))]
 #print("hosts here "+hosts)
 #
 # Application definition
@@ -172,7 +172,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'forest_site/static/media')
 SESSION_COOKIE_SECURE = True
 
 SESSION_COOKIE_SECURE = False
+<<<<<<< HEAD
+#CSRF_COOKIE_DOMAIN = '52.28.34.67'
+CSRF_TRUSTED_ORIGINS = '52.50.106.122'
+=======
 CSRF_COOKIE_DOMAIN = '52.28.34.67'
 #CSRF_TRUSTED_ORIGINS = '52.28.34.67'
+>>>>>>> 6e1b75ff9276f6728d42731387c7ee8952bc4210
 #SECURE_PROXY_HANDLER = ('HTTP_X_FORWARDED_PROTO'. 'http')
 
