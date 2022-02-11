@@ -162,12 +162,12 @@ MEDIA_URL = '/media/'
 
 #MEDIA_ROOT = os.path.join(BASE_DIR, 'forest_site/media')
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'forest_site/static/media')
 
 
 #True to avoid transmitting the CSRF cookie over HTTP accidentally
 #CSRF_COOKIE_SECURE = False
-#True to avoid transmitting the session cookie over HTTP accidentally
+#True to avoid transmitting thecd  session cookie over HTTP accidentally
 
 SESSION_COOKIE_SECURE = True
 

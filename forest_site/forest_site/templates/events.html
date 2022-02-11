@@ -3,6 +3,21 @@
 {% block content %}
 
 {% load static %}
+<div class="blog__container">
+    {% if is_paginated %}
+        <nav aria-label="Page navigation conatiner"></nav>
+          <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+                 <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+            {% endif %}
+            {% if page_obj.has_next %}
+                    <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+            {% endif %}
+          </ul>
+        </nav>
+        
+    {% endif %}
+
     {% for event in event_posts %}
     <div class="card mb-4">
         <div class="card-body">
@@ -13,23 +28,10 @@
         </div>
     </div>
     {% endfor %}
-        
-    {% if is_paginated %}
-          <nav aria-label="Page navigation conatiner"></nav>
-          <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
 
-            {% endif %}
-          </ul>
-          </nav>
-        </div>
-    {% endif %}
-
+</div>
 {%endblock%}
+
 {% block sidebar %}
 
 <div class="card  my-4">
