@@ -153,16 +153,16 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static/"),
 )
 
-#STATIC_ROOT = os.path.join(BASE_DIR, 'forest_site/static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Base url to serve media files
 MEDIA_URL = '/media/'
 
 # Path where media is stored
 
-#MEDIA_ROOT = os.path.join(BASE_DIR, 'forest_site/media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'forest_site/media')
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
+#MEDIA_ROOT = '/home/ubuntu/woodland_website/forest_site/media'
 
 
 #True to avoid transmitting the CSRF cookie over HTTP accidentally
@@ -172,12 +172,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
 SESSION_COOKIE_SECURE = True
 
 SESSION_COOKIE_SECURE = False
-<<<<<<< HEAD
-#CSRF_COOKIE_DOMAIN = '52.28.34.67'
+
 CSRF_TRUSTED_ORIGINS = '52.50.106.122'
-=======
-CSRF_COOKIE_DOMAIN = '52.28.34.67'
-#CSRF_TRUSTED_ORIGINS = '52.28.34.67'
->>>>>>> 6e1b75ff9276f6728d42731387c7ee8952bc4210
+CSRF_COOKIE_DOMAIN = '52.50.106.122'
+
+
 #SECURE_PROXY_HANDLER = ('HTTP_X_FORWARDED_PROTO'. 'http')
 
