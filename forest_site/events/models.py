@@ -16,7 +16,7 @@ class Event(models.Model):
     content = HTMLField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    image = models.ImageField(('image'), blank=True, null=True, upload_to='uploaded_images', default='default_woodland.jpg')
+    image = models.ImageField(('image'), blank=True, null=True, upload_to='', default='default_woodland.jpg')
 
     day = models.DateField(u'Day of the event', help_text=u'Day of the event', default=datetime.now())
 
