@@ -2,5 +2,5 @@ forest_site/.env
 forest_site/forest_site/settings.py
 
 forest_site/settings.py
-forest_site/db.sqlite3
+
 
